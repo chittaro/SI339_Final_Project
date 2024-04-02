@@ -1,0 +1,50 @@
+:root{
+    --primary: rgb(34, 34, 34);
+    --secondary: rgb(96, 249, 96);
+    --tertiary: rgb(90, 162, 90);
+    --gray1: rgb(74, 74, 74);
+    --gray2: rgb(131, 131, 131);
+}
+
+.skip {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -20px;
+}
+
+.skip:focus{
+    top: 5px;
+}
+
+body{
+    background-color: var(--primary);
+    color: white;
+    font-family: "VT323", monospace;
+    font-weight: 200;
+    margin: 2%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+nav li {
+    background-color: var(--gray1);
+    padding: 10px;
+    border: 2px solid var(--tertiary);
+    border-radius: 10px;
+}
+
+nav a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 40px;
+}
+
+nav a {
+    color: nav
+}
