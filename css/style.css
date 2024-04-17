@@ -2,6 +2,7 @@
     --primary: rgb(34, 34, 34);
     --secondary: rgb(96, 249, 96);
     --tertiary: rgb(90, 162, 90);
+    --dgray: rgb(55, 55, 55);
     --gray1: rgb(74, 74, 74);
     --gray2: rgb(131, 131, 131);
 }
@@ -23,6 +24,15 @@ body{
     font-family: "VT323", monospace;
     font-weight: 200;
     margin: 2%;
+}
+
+p{
+    font-size: 25px;
+    font-weight: 100;
+}
+
+main{
+    margin: 5%;
 }
 
 .nav-links {
@@ -47,4 +57,80 @@ nav a {
 
 nav a {
     color: nav
+}
+
+.master-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    max-width: 80%;
+    border-radius: 60%;
+    border: 5px solid var(--gray2);
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h1::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: hotpink;
+    height: 1em;
+}
+
+h2{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--secondary);
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.centered{
+    grid-column: 1/-1;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.break {
+    margin-top: 30px;
+}
+
+.text-box {
+    border: 2px dashed var(--secondary);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.proj-div div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 10px;
+    border-radius: 100px;
+    border: 2px solid black;
+    padding: 30px;
+    background-color: var(--dgray);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proj-div div:nth-child(even){
+    margin-left: 60px;
+}
+.proj-div div:nth-child(odd){
+    margin-right: 60px;
+}
+
+
+.home-img {
+    border-radius: 60px;
+    max-width: 85%;
 }
