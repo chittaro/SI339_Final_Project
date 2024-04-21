@@ -39,14 +39,22 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
 
-
-nav li {
     background-color: var(--gray1);
     padding: 10px;
-    border: 2px solid var(--tertiary);
+    border: 5px solid var(--tertiary);
+    border-style: groove;
     border-radius: 10px;
+    margin: 5% 10%;
+}
+
+nav li {
+    padding: 2%;
+}
+
+nav li:hover {
+    background-color: gray;
+    border-radius: 5%;
 }
 
 nav a {
@@ -122,15 +130,50 @@ h2{
     align-items: center;
 }
 
-.proj-div div:nth-child(even){
-    margin-left: 60px;
-}
-.proj-div div:nth-child(odd){
-    margin-right: 60px;
+
+video{
+    max-width: 90%;
 }
 
-
-.home-img {
+.home-video {
     border-radius: 60px;
-    max-width: 85%;
+}
+
+
+figure:nth-child(even){
+    grid-column-start: 2;
+}
+
+h3 {
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
+    font-size: 300%;
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce){
+    video{
+        display: none;
+    }
+}
+
+.centered h1 {
+    margin-bottom: 8%;
+}
+
+.high-div {
+    margin: 10px;
+}
+
+.high-div h2:after {
+    content: "";
+    position: relative;
+    display: block;
+    bottom: -10px;
+    width: 50%;
+    left: 25%;
+    right: 25%;
+    height: 0.5em;
+    border-top: 2px solid var(--gray2);
+    z-index: -1;
 }
