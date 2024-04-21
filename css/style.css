@@ -99,6 +99,7 @@ h2{
     -webkit-text-stroke-color: var(--secondary);
     font-size: 40px;
     font-weight: 400;
+    margin-top: 30px;
 }
 
 .centered{
@@ -157,15 +158,30 @@ h3 {
     }
 }
 
-.centered h1 {
-    margin-bottom: 8%;
-}
-
-.high-div {
+.game-div {
     margin: 10px;
 }
 
-.high-div h2:after {
+.desc {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 5px;
+}
+
+.game-img {
+    max-width: 95%;
+    grid-row: 1 / span 6;
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--tertiary);
+}
+
+.game-div h2:after {
     content: "";
     position: relative;
     display: block;
