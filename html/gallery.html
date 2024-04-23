@@ -3,10 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Document</title>
+    <link rel = "stylesheet" href = "../css/reset.css">
+    <link rel = "stylesheet" href = "../css/prism.css">
+    <link rel = "stylesheet" href = "../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+
+    <header>
+        <a class = "skip" href = "gallery.html#main">Skip to Main Content</a>
+        <nav>
+            <ul class = "nav-links">
+                <li><a href = "index.html">Home</a></li>
+                <li class = "active"><a href = "highlights.html">Gallery</a></li>
+                <li><a href = "gallery.html">PyGame</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class = "centered">
+            <h1>PYGAME</h1>
+            <h2>PyGame Intro</h2>
+            <div class = "text-box">
+                <p>PyGame is a common introductory library for game development with Python. PyGame makes it easy to interface with a GUI, listen to key presses, identify mouse movements, and much more just with a few simple function calls. Similar to turtle graphics, this library allows for drawing content on a screen but with less hassle. With PyGame, one can create games as simple as complicated as terraria to as simple as snake.</p>
+                <a class = "link" href = "https://www.pygame.org/wiki/about">(CLICK HERE to read more)</a>
+            </div>
+
+            <h2>PyGame Structure</h2>
+            <div class = "text-box">
+                <p>Contents of a PyGame project typically include the following: screen initialization, main game loop, event listeners, screen fill, and screen update (shown below). Much of this setup involves the same exact code, so feel free to start off your project with a copy of the code below.</p>
+            </div>
+            
+
+            <pre><code class = "language-python">
+
+                # INITIALIZATION:
+                import pygame, time, random, os
+                pygame.init()
+                wwid = 500 # window width
+                whgt = 700 # window height
+                clock = pygame.time.Clock()
+                win = pygame.display.set_mode((wwid ,whgt))
+                pygame.display.set_caption('TITLE')
+
+                # (add additional initial variables as needed)
+                
+                # MAIN GAME LOOP:
+                run = True
+                while run == True:
+                    
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            run = False
+
+                    # IF EVENT LISTENERS NEEDED:
+                    keys = pygame.key.get_pressed()
+                    mosX, mosY = pygame.mouse.get_pos()
+                    pressed = pygame.mouse.get_pressed()
+
+                    # BODY OF THE LOOP: (fill in)
+
+                    win.fill((255,255,255)) # reset background
+
+                    # DRAW IMAGES: (fill in)
+
+                    pygame.display.update() # update screen
+                    clock.tick(50)
+
+                pygame.quit()
+
+            </code></pre>
+
+            <h2>Resources</h2>
+            <div class = "text-box">
+                <p>Fortunately, PyGame is a very widely-used open-source library, which means that there are plenty of resources made publicly available. I personally would recommend the following resources for a thorough introduction:</p>
+
+                <ul class = "resources">
+                    <li><a class = "link" href = "https://realpython.com/pygame-a-primer/"><span>RealPython</span>: includes conceptual overview</a></li>
+                    <li><a class = "link" href = "https://www.techwithtim.net/tutorials/game-development-with-python/pygame-tutorial"><span>Tech w/ Tim </span>: includes helpful video walkthroughs</a></li>
+                    <li><a class = "link" href = "https://www.geeksforgeeks.org/pygame-tutorial/"><span>Geeks4Geeks</span>: a classic</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+    <script src = "../js/prism.js"></script>
+
 </body>
 </html>
